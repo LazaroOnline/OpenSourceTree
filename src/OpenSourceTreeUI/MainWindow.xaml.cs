@@ -24,12 +24,18 @@ namespace OpenSourceTreeUI
 			InitializeComponent();
 		}
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void OpenSourceTree_Click(object sender, RoutedEventArgs e)
 		{
 			OpenSourceTree(this.TxtRepoPath.Text);
 		}
 
-		private void OpenSourceTree(string repoDirPath)
+		private void OpenSourceTreeFromClipboard_Click(object sender, RoutedEventArgs e)
+		{
+			this.TxtRepoPath.Text = Clipboard.GetText(TextDataFormat.Text);
+			OpenSourceTree(this.TxtRepoPath.Text);
+		}
+
+		public void OpenSourceTree(string repoDirPath)
 		{
 			// Command example:
 			// "C:\Users\your.windows.username\AppData\Local\SourceTree\app-3.4.5\SourceTree.exe" -f "C:\some-folder\your-repo-folder"

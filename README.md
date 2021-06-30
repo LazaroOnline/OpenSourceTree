@@ -1,5 +1,5 @@
 
-# <img src="Icon.png" width="45"/> Open SourceTree
+# <img src="icon.png" width="45"/> Open SourceTree
 
 
 ## Description
